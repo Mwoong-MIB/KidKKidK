@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">YouTubeView</string>
+    <string name="app_name">KidKKidK</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="makeList">make a list</string>
 </resources>

@@ -19,17 +19,14 @@
 package com.scsa.android.kidkkidk.youtubeviewdemo;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.scsa.android.kidkkidk.youtubeview.activity.YouTubeActivity;
 import com.scsa.android.kidkkidk.youtubeview.models.YouTubePlayerType;
-import com.scsa.android.kidkkidk.youtubeviewdemo.helper.Constants;
+import com.scsa.android.kidkkidk.youtubeviewdemo.remote.RemoteControlActivity;
 import com.scsa.android.kidkkidk.youtubeviewdemo.youtubenative.YouTubeNativeActivityDemo;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,49 +36,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button singleYoutubePlayerButton = findViewById(R.id.singleYoutubePlayer);
         Button youtubeNativeFragmentButton = findViewById(R.id.youtubeNativeFragment);
-        Button youtubeWebViewFragmentButton = findViewById(R.id.youtubeWebviewFragment);
-
-
-        singleYoutubePlayerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, YouTubeActivity.class);
-                intent.putExtra("apiKey", Constants.API_KEY);
-                intent.putExtra("videoId", "3AtDnEC4zak");
-                startActivity(intent);
-            }
-        });
+        Button connectButton = findViewById(R.id.connectRemote);
 
         youtubeNativeFragmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, YouTubeNativeActivityDemo.class);
-                intent.putExtra("playerType", YouTubePlayerType.STRICT_NATIVE);
+                intent.putExtra("playerType", YouTubePlayerType.AUTO);
                 startActivity(intent);
             }
         });
 
-        youtubeWebViewFragmentButton.setOnClickListener(new View.OnClickListener() {
+        connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, YouTubeNativeActivityDemo.class);
-                intent.putExtra("playerType", YouTubePlayerType.WEB_VIEW);
+                Intent intent = new Intent(MainActivity.this, RemoteControlActivity.class);
                 startActivity(intent);
             }
         });
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @Override
-    protected void onResume() {
-        super.onResume();
-        startLockTask();
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void someMethod(){
-        stopLockTask();
     }
 }

@@ -19,6 +19,7 @@
 package com.scsa.android.kidkkidk.youtubeview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.text.TextUtils;
@@ -27,6 +28,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -38,6 +40,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.scsa.android.kidkkidk.youtubeview.activity.YouTubeActivity;
 import com.scsa.android.kidkkidk.youtubeview.fragment.YouTubeBaseFragment;
 import com.scsa.android.kidkkidk.youtubeview.fragment.YouTubeFragment;
 import com.scsa.android.kidkkidk.youtubeview.fragment.YouTubeWebViewFragment;
@@ -66,6 +69,7 @@ public class YouTubePlayerView extends FrameLayout {
     private ImageView thumbnailImageView;
     private String webViewUrl;
     private ImageLoader imageLoader;
+    private Button fullbutton;
 
     public YouTubePlayerView(Context context) {
         super(context);
@@ -141,6 +145,8 @@ public class YouTubePlayerView extends FrameLayout {
             progressBar.getIndeterminateDrawable().setColorFilter(color, PorterDuff.Mode.MULTIPLY);
         }
 
+        fullbutton = findViewById(R.id.full);
+
         setListeners();
     }
 
@@ -154,6 +160,16 @@ public class YouTubePlayerView extends FrameLayout {
 
         thumbnailImageView.setOnClickListener(onClickListener);
         playIcon.setOnClickListener(onClickListener);
+        fullbutton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), YouTubeActivity.class);
+                intent.putExtra("apiKey", "your_api_key");
+                String id = videoId;
+                intent.putExtra("videoId", id);
+                getContext().startActivity(intent);
+            }
+        });
     }
 
     private void handleBindPlayer() {

@@ -11,15 +11,15 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="16dp"
-        android:text="Welcome to YouTubeView Demo"
+        android:text="For the children."
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/singleYoutubePlayer"
+        android:id="@+id/makeList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="YouTube Activity (Fullscreen)"
+        android:text="@string/makeList"
         android:textSize="14sp" />
 
     <Button
@@ -31,11 +31,19 @@
         android:textSize="14sp" />
 
     <Button
-        android:id="@+id/youtubeWebviewFragment"
+        android:id="@+id/checkDistance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="YouTube WebView Player (inline)"
+        android:text="check how far is"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/connectRemote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="connect remote controller"
         android:textSize="14sp" />
 
 </LinearLayout>
