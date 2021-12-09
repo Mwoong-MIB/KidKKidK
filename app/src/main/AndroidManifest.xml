@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.flipkart.youtubeviewdemo">
+    package="com.scsa.android.kidkkidk.youtubeviewdemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,15 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="true">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:lockTaskMode="if_whitelisted">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.flipkart.youtubeview.activity.YouTubeActivity" />
-        <activity android:name=".youtubenative.YouTubeNativeActivityDemo" />
+        <activity android:name="com.scsa.android.kidkkidk.youtubeview.activity.YouTubeActivity" />
+        <activity android:name="com.scsa.android.kidkkidk.youtubeviewdemo.youtubenative.YouTubeNativeActivityDemo" />
     </application>
 
 </manifest>

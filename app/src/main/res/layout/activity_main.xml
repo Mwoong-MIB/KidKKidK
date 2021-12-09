@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.flipkart.youtubeviewdemo.MainActivity">
+    tools:context="com.scsa.android.kidkkidk.youtubeviewdemo.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
