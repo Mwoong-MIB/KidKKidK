@@ -83,7 +83,7 @@ public class YouTubePlayerAdapter extends RecyclerView.Adapter<YouTubePlayerAdap
         //playerView.overridePlayIcon("https://i.ibb.co/ZKZ2qdc/ic-launcher.png");
 
         //if you have the resource id then pass it as below
-        //playerView.overridePlayIcon(R.mipmap.ic_launcher);
+        //playerView.overridePlayIcon(R.mipmap.ic_launcher_k);
     }
 
     static class YouTubePlayerViewHolder extends RecyclerView.ViewHolder {

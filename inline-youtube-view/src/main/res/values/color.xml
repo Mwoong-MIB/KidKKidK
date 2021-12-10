@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="default_progress_bar_color">#2196F3</color>
+    <color name="default_progress_bar_color">#E38350</color>
     <color name="black">#000000</color>
+    <color name="ice">#ECE8DD</color>
+    <color name="heart">#DA76A5</color>
+    <color name="kid">#E38350</color>
+    <color name="sblack">#707070</color>
+    <color name="white">#EEEEEE</color>
 </resources>

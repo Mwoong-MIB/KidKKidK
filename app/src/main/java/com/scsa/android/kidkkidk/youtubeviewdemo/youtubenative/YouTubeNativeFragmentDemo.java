@@ -18,6 +18,8 @@
  */
 package com.scsa.android.kidkkidk.youtubeviewdemo.youtubenative;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,12 +29,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
+import com.scsa.android.kidkkidk.youtubeview.models.YouTubePlayerType;
 import com.scsa.android.kidkkidk.youtubeviewdemo.R;
 
 import java.util.ArrayList;
 
 public class YouTubeNativeFragmentDemo extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,10 +46,12 @@ public class YouTubeNativeFragmentDemo extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         view.setLayoutManager(linearLayoutManager);
 
-        Bundle arguments = getArguments();
-        int playerType = arguments.getInt("playerType");
+        //Bundle arguments = getArguments();
+        int playerType;
+        //= arguments.getInt("playerType");
+        playerType = YouTubePlayerType.AUTO;
 
-        ArrayList<String> videoIds = new ArrayList<>();
+        ArrayList<String> videoIds = videoModel.getInstance();;
         videoIds.add("xlmPbjAcRXQ");
         videoIds.add("p8GVrLBum4M");
         videoIds.add("SiJM7BHDu_E");

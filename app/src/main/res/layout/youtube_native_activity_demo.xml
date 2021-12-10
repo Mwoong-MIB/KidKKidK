@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/ice"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/makeList"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="4dp"
+        android:elevation="60dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:backgroundTintMode="src_over"
+        android:text="@string/makeList"
+        android:onClick="listmake"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/connectRemote"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="4dp"
+        android:elevation="60dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/sblack"
+        android:backgroundTintMode="src_over"
+        android:text="connect remote" />
 
     <RelativeLayout
         android:id="@+id/container"
@@ -10,4 +37,4 @@
 
     </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

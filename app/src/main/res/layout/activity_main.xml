@@ -3,47 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.scsa.android.kidkkidk.youtubeviewdemo.MainActivity">
+    tools:context="com.scsa.android.kidkkidk.youtubeviewdemo.MainActivity"
+    android:background="@color/ice">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="16dp"
-        android:text="For the children."
-        android:textStyle="bold" />
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="We only focus on children.\n
+You focus on what you have to do."
+        android:textColor="@color/sblack"
+        android:textStyle="italic" />
 
-    <Button
-        android:id="@+id/makeList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/makeList"
-        android:textSize="14sp" />
 
     <Button
         android:id="@+id/youtubeNativeFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="YouTube Native Player (inline)"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="20dp"
+        android:elevation="60dp"
+        android:text="YouTube"
+        android:backgroundTint="@color/heart"
+        android:backgroundTintMode="src_over"
         android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/checkDistance"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="20dp"
+        android:elevation="60dp"
+        android:backgroundTint="@color/kid"
+        android:backgroundTintMode="src_over"
         android:text="check how far is"
-        android:textSize="14sp" />
-
-    <Button
-        android:id="@+id/connectRemote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="connect remote controller"
         android:textSize="14sp" />
 
 </LinearLayout>
